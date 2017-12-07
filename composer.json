@@ -1,0 +1,57 @@
+{
+    "name": "msbios/dashboard",
+    "description": "MSBios Dashboard",
+    "license": "GPL",
+    "keywords": [
+        "php"
+    ],
+    "homepage": "https://github.com/msbios/msbios-dashboard",
+    "minimum-stability": "stable",
+    "authors": [
+        {
+            "name": "Judzhin Miles",
+            "email": "info@msbios.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "MSBios\\Dashboard\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MSBiosTest\\Dashboard\\": "tests/"
+        }
+    },
+    "require": {
+        "msbios/application": "^1.0",
+        "msbios/resource": "^1.0",
+        "msbios/authentication": "^1.0",
+        "msbios/guard": "^1.0",
+        "msbios/guard-resource": "^1.0",
+        "msbios/guard-cpanel": "^1.0",
+        "msbios/cpanel": "^1.0"
+    },
+    "require-dev": {
+        "msbios/debug": "^1.0",
+        "msbios/test": "^1.0"
+    },
+    "scripts": {
+        "cs-check": "phpcs",
+        "cs-fix": "phpcbf",
+        "test": [
+            "@cs-check",
+            "phpunit --colors=always"
+        ],
+        "test-coverage": "phpunit --colors=always --coverage-clover clover.xml",
+        "upload-coverage": "coveralls -v",
+        "themes": "cd public && ln -s ../vendor/msbios/cpanel/themes/limitless/public limitless",
+        "serve": "php -S 0.0.0.0:3107 -t public public/index.php",
+        "commit": "git add . && git commit -a -m \"Lazy Composer Commiter\" && git push"
+    },
+    "extra": {
+        "zf": {
+            "component": "MSBios\\Dashboard"
+        }
+    }
+}
