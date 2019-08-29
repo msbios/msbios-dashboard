@@ -6,7 +6,15 @@
 return [
     // Retrieve list of modules used in this application.
     'modules' => [
-        'Zend\Log',
+        'MSBios\Hydrator',
+        'MSBios\Permissions\Acl',
+        'MSBios\InputFilter',
+        'MSBios\Validator',
+        'Zend\Paginator',
+        'MSBios\Cache',
+        'Zend\Cache',
+        'Zend\Serializer',
+        'MSBios\Session',
         'Zend\I18n',
         'Zend\Navigation',
         'Zend\Db',
@@ -21,7 +29,6 @@ return [
         'Zend\Session',
         'Zend\Router',
         'Zend\Validator',
-
         'MSBios\Application',
         'MSBios\Theme',
         'MSBios\Widget',
