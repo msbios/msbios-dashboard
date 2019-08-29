@@ -36,7 +36,7 @@ return [
                             'regex' => 'navigation.(?<format>(json|xml)?)',
                             'spec' => 'navigation.%format%',
                             'defaults' => [
-                                'controller' => \MSBios\Navigation\Controller\IndexController::class,
+                                'controller' => \MSBios\CPanel\Controller\SidebarController::class,
                             ],
                         ],
                     ],
